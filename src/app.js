@@ -4,6 +4,16 @@ const app = express();
 
 app.use(express.json());
 
+// Root Endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Welcome to the CA2 Node.js API',
+    endpoints: {
+      health: '/health'
+    }
+  });
+});
+
 // Health Check Endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({

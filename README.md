@@ -55,12 +55,9 @@ git push -u origin main
 ```
 
 #### GitHub Secrets Configuration
-To enable the pipeline, add the following secrets in **Settings > Secrets and variables > Actions**:
-- `DOCKERHUB_USERNAME`: Your Docker Hub username.
-- `DOCKERHUB_TOKEN`: Your Docker Hub Personal Access Token (PAT).
-- `RENDER_DEPLOY_HOOK_URL`: (Optional) The deploy hook URL from Render or your chosen cloud provider.
+To enable the pipeline, add the following secret in **Settings > Secrets and variables > Actions**:
+- `RENDER_DEPLOY_HOOK_URL`: The deploy hook URL from Render or your chosen cloud provider.
 
 ### 4. Pipeline Workflow
 - **Continuous Integration**: On every push or PR, the pipeline installs dependencies and runs `npm test`.
-- **Continuous Delivery**: On push to `main`, it builds the Docker image and pushes it to Docker Hub.
-- **Continuous Deployment**: Triggers a deployment via a webhook (e.g., Render).
+- **Continuous Deployment**: On push to `main`, it triggers a deployment via a webhook (e.g., Render) once tests pass.
