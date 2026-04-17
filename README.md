@@ -43,7 +43,7 @@ docker run -p 3000:3000 node-express-app
 ```
 Then visit `http://localhost:3000/health`.
 
-### 3. GitHub & CI/CD Setup
+### 3. GitHub Setup
 
 #### Push to GitHub
 1. Create a new repository on GitHub.
@@ -54,10 +54,5 @@ git branch -M main
 git push -u origin main
 ```
 
-#### GitHub Secrets Configuration
-To enable the pipeline, add the following secret in **Settings > Secrets and variables > Actions**:
-- `RENDER_DEPLOY_HOOK_URL`: The deploy hook URL from Render or your chosen cloud provider.
-
 ### 4. Pipeline Workflow
 - **Continuous Integration**: On every push or PR, the pipeline installs dependencies and runs `npm test`.
-- **Continuous Deployment**: On push to `main`, it triggers a deployment via a webhook (e.g., Render) once tests pass.
