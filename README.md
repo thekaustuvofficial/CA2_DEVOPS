@@ -47,11 +47,7 @@ Then visit `http://localhost:3000/health`.
 
 #### Push to GitHub
 1. Create a new repository on GitHub.
-2. Run the following commands:
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-git branch -M main
-git push -u origin main
+ and push it on github
 ```
 
 ### 4. Pipeline Workflow
