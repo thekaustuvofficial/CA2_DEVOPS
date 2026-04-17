@@ -10,7 +10,7 @@ RUN npm ci
 # Copy source
 COPY . .
 
-# In a real app, you might run 'npm run build' here for TS
+
 # RUN npm run build
 
 # Production Stage
